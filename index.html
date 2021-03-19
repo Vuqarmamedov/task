@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task</title>
+</head>
+<body>
+
+
+<h1>Check console</h1>
+
+<script>
+
+    var a = [1,2,3,4,5]
+    var b = [2,1,4,3]
+
+    var aSum = 0
+    var bSum = 0
+
+    var len;
+    if (a.length > b.length) {
+        len = a.length;
+    } else {
+        len = b.length
+    }
+
+    for (var i = 0; i < len; i++){
+        if (i < a.length) {
+            aSum+=a[i];
+        }
+        if (i < b.length) {
+            bSum += b[i];
+        }
+    }
+
+    console.log(Math.abs(aSum - bSum))
+
+
+
+
+    var a1 = [1, 2, 3, 4, 5];
+    var b1 = [6, 7, 8, 9, 10];
+    var c1 = [11, 12, 13, 14, 15];
+
+    for (var i = 0; i < b1.length / 2; i++) {
+        var item = b1[i];
+        b1[i] = b1[b1.length - i - 1];
+        b1[b1.length - i - 1] = item;
+    }
+
+    var newArr = a1.concat(b1,c1)
+
+    console.log(newArr)
+
+
+</script>
+</body>
+</html>
