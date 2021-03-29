@@ -35,23 +35,28 @@
 
     console.log(Math.abs(aSum - bSum))
 
+</script>
 
 
+<script>
 
-    var a1 = [1, 2, 3, 4, 5];
-    var b1 = [6, 7, 8, 9, 10];
-    var c1 = [11, 12, 13, 14, 15];
+    var arr1 = [1, 2, 3, 4, 5];
+    var arr2 = [6, 7, 8, 9, 10];
+    var arr3 = [11, 12, 13, 14, 15];
 
-    for (var i = 0; i < b1.length / 2; i++) {
-        var item = b1[i];
-        b1[i] = b1[b1.length - i - 1];
-        b1[b1.length - i - 1] = item;
+    var result = arr1;
+    var k1 = 0;
+    var k2 = 0;
+
+    for (var i = arr1.length; i < (arr1.length + arr2.length + arr3.length); i++) {
+        if (k1 < arr2.length) {
+            result[i] = arr2[k1++];
+        } else if (k2 < arr3.length) {
+            result[i] = arr3[k2++];
+        }
     }
 
-    var newArr = a1.concat(b1,c1)
-
-    console.log(newArr)
-
+    console.log(result)
 
 </script>
 </body>
